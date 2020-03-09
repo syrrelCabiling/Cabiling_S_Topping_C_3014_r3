@@ -20,4 +20,3 @@ Research 3:
 First Time Login Guide: https://stackoverflow.com/questions/5676562/php-first-time-login-page
 Other versions of redirecting [We're exploring our options as other times it broke]: https://stackoverflow.com/questions/29098106/php-script-to-redirect-each-user-after-login
 https://stackoverflow.com/questions/12382972/redirect-to-admin-user-page-after-login
-
