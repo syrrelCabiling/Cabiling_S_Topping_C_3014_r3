@@ -10,7 +10,7 @@ This is the Docker environment set up for Movie Review
 #### Set up
 1. Clone the repo
    ```
-   git clone https://github.com/spiderPan/Fanshawe-IDP-Inclass.git
+   git clone https://github.com/syrrelCabiling/Cabiling_S_Topping_C_r3.git
    ```
 2. Open the folder and run docker-compose
    ```

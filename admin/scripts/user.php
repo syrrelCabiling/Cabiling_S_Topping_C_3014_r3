@@ -27,6 +27,7 @@ function createUser($fname, $username, $password, $email){
 
 ?>
 
+
 <?php
 
 
@@ -59,7 +60,7 @@ function getSingleUser($id)
 <?php 
 function editUser($id, $fname, $username, $password, $email){
 
-    $user_is_edited = 1;
+    $user_is_edited = 1; //targeting the 'edited' column in the db which is set as boolean and is null by default
     //TODO: set up database connection
     $pdo = Database::getInstance()->getConnection();
 
@@ -85,8 +86,9 @@ function editUser($id, $fname, $username, $password, $email){
     // Otherwise, return some error message...
     if($update_user_result){
         redirect_to('index.php');
+        
     }else{
-        return 'Guess you got canned...';
+        return 'Sorry! Not today!';
     }
 }
 

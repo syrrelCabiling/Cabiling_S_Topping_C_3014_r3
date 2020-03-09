@@ -52,7 +52,7 @@ function login($username, $password, $ip){
 
         if(isset($id)){
 
-            $edited_user = 1;
+            $edited_user = 1; //if($edited_user == 1){} Trying to target the 'edited' column in db which is a boolean and is set to null
 
             $checking_edit_query = 'SELECT * FROM tbl_user WHERE user_id =:id AND edited =:edited';
             $checking_edit = $pdo->prepare($checking_edit_query);
@@ -68,22 +68,22 @@ function login($username, $password, $ip){
                 redirect_to('index.php');
                 
             }
+        redirect_to('admin_edituser.php'); 
+
             //to redirect to admin after first login
             // if($edited_user = NULL){
             //     redirect_to('admin_edituser.php'); 
             // }
-            redirect_to('admin_edituser.php'); 
         }
     }
     else{
+        
         //User does not exist
-        $message = 'User does not exist';
+        //$message = 'User does not exist';
  
-  
-
-
-    return $message;
+   
 }
+return $message;
 }
 
 
@@ -135,7 +135,7 @@ function logout(){ //destroying the login data from the user locker/server
 
 //     $log_user = $log_user_set->fetch(PDO::FETCH_ASSOC); //executes (makes everything true)
 
-//     if($log_user['firstLog'] == 1){
+//     if($log_user['firstLog'] == 1){ 
 //         redirect_to('admin_edituser.php');
 //     }
 // }
